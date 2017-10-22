@@ -153,7 +153,7 @@
   <modules>
     <module>lab-3-core</module>
     <module>lab-4-core</module>
-    <!--<module>lab-5-aop</module>-->
+    <module>lab-5-aop</module>
     <!--<module>lab-6-jdbc</module>-->
     <!--<module>lab-7-orm</module>-->
     <!--<module>lab-8-tx</module>-->

@@ -1,9 +1,11 @@
+package lab.model;
+
 import static org.junit.Assert.assertTrue;
+
 import lab.aop.AopLog;
 import lab.model.Bar;
 import lab.model.Customer;
 import lab.model.CustomerBrokenException;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

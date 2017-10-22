@@ -1,10 +1,12 @@
+package lab.model;
+
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+
 import lab.aop.AopLog;
 import lab.model.ApuBar;
 import lab.model.Bar;
 import lab.model.Customer;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
