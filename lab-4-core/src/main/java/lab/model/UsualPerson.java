@@ -2,7 +2,12 @@ package lab.model;
 
 import javax.persistence.*;
 import java.util.List;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
+
+@Data
+@EqualsAndHashCode(exclude = "id")
 @Entity
 public class UsualPerson implements Person {
     @Id
@@ -69,52 +74,4 @@ public class UsualPerson implements Person {
         this.contacts = contacts;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String toString() {
-        String s = "Name: " + name + "\n"
-                + "Age: " + age + "\n"
-                + "Height: " + height + "\n"
-                + "Country: " + country + "\n"
-                + "Is Programmer?: " + isProgrammer + "\n";
-        if ((contacts != null) && (!contacts.isEmpty())) {
-            s += "Contacts: ";
-            for (String contact : contacts) {
-                s += contact + ", ";
-            }
-            s += "\n";
-        }
-        return s;
-    }
-
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        UsualPerson person = (UsualPerson) o;
-
-        if (age != person.age) return false;
-        if (Float.compare(person.height, height) != 0) return false;
-        if (isProgrammer != person.isProgrammer) return false;
-        if (country != null ? !country.equals(person.country) : person.country != null) return false;
-        if (name != null ? !name.equals(person.name) : person.name != null) return false;
-
-        return true;
-    }
-
-    public int hashCode() {
-        int result;
-        result = (name != null ? name.hashCode() : 0);
-        result = 31 * result + age;
-        result = 31 * result + (height != +0.0f ? Float.floatToIntBits(height) : 0);
-        result = 31 * result + (isProgrammer ? 1 : 0);
-        result = 31 * result + (country != null ? country.hashCode() : 0);
-        return result;
-    }
 }

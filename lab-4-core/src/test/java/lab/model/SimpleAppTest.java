@@ -11,7 +11,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class SimpleAppTest {
 
-  protected static final String APPLICATION_CONTEXT_XML_FILE_NAME = "application-context.xml";
+  protected static final String APPLICATION_CONTEXT_XML_FILE_NAME = "classpath:application-context.xml";
 
   private AbstractApplicationContext context;
 
