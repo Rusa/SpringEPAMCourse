@@ -6,6 +6,9 @@ public class AopLog {
     public static void append(String str){
         value.append(str);
     }
+    public static void appendFormat(String str, Object... args){
+        value.append(String.format(str, args));
+    }
 
     public static String getStringValue(){
         return value.toString();

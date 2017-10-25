@@ -2,5 +2,6 @@ package lab.model;
 
 
 public interface Bar {
-    Squishee sellSquishee(Customer customer);
+
+  Squishee sellSquishee(Customer customer);
 }

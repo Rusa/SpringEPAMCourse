@@ -1,32 +1,33 @@
 package lab.model;
 
 public class Customer implements Person {
-    private String name;
-    private boolean broke;
 
-    public Customer() {
-    }
+  private String name;
+  private boolean broke;
 
-    public Customer(String name) {
-        this.name = name;
-    }
+  public Customer() {
+  }
 
-    public String getName() {
-        return name;
-    }
+  public Customer(String name) {
+    this.name = name;
+  }
 
-    public boolean isBroke() {
-        return broke;
-    }
+  public String getName() {
+    return name;
+  }
 
-    public void setBroke(boolean broke) {
-        this.broke = broke;
-    }
+  public boolean isBroke() {
+    return broke;
+  }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+  public void setBroke(boolean broke) {
+    this.broke = broke;
+  }
 
-    public void sayHello(Person person) {
-    }
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public void sayHello(Person person) {
+  }
 }

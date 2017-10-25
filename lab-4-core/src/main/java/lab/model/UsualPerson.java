@@ -1,7 +1,12 @@
 package lab.model;
 
-import javax.persistence.*;
 import java.util.List;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -10,68 +15,69 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(exclude = "id")
 @Entity
 public class UsualPerson implements Person {
-    @Id
-    @Column
-    private int id;
 
-    @Column
-    private String name;
+  @Id
+  @Column
+  private int id;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "country_id")
-    private Country country;
+  @Column
+  private String name;
 
-    private int age;
-    private float height;
-    private boolean isProgrammer;
+  @ManyToOne(fetch = FetchType.EAGER)
+  @JoinColumn(name = "country_id")
+  private Country country;
 
-    private List<String> contacts;
+  private int age;
+  private float height;
+  private boolean isProgrammer;
 
-    public void setIsProgrammer(boolean isProgrammer) {
-        this.isProgrammer = isProgrammer;
-    }
+  private List<String> contacts;
 
-    public void setAge(int age) {
-        this.age = age;
-    }
+  public void setIsProgrammer(boolean isProgrammer) {
+    this.isProgrammer = isProgrammer;
+  }
 
-    public void setHeight(float height) {
-        this.height = height;
-    }
+  public void setAge(int age) {
+    this.age = age;
+  }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+  public void setHeight(float height) {
+    this.height = height;
+  }
 
-    public String getName() {
-        return name;
-    }
+  public void setName(String name) {
+    this.name = name;
+  }
 
-    public void sayHello(Person person) {
-    }
+  public String getName() {
+    return name;
+  }
 
-    public Country getCountry() {
-        return country;
-    }
+  public void sayHello(Person person) {
+  }
 
-    public void setCountry(Country country) {
-        this.country = country;
-    }
+  public Country getCountry() {
+    return country;
+  }
 
-    public boolean isProgrammer() {
-        return isProgrammer;
-    }
+  public void setCountry(Country country) {
+    this.country = country;
+  }
 
-    public void setProgrammer(boolean programmer) {
-        isProgrammer = programmer;
-    }
+  public boolean isProgrammer() {
+    return isProgrammer;
+  }
 
-    public List<String> getContacts() {
-        return contacts;
-    }
+  public void setProgrammer(boolean programmer) {
+    isProgrammer = programmer;
+  }
 
-    public void setContacts(List<String> contacts) {
-        this.contacts = contacts;
-    }
+  public List<String> getContacts() {
+    return contacts;
+  }
+
+  public void setContacts(List<String> contacts) {
+    this.contacts = contacts;
+  }
 
 }

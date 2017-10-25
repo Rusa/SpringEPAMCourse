@@ -10,18 +10,18 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(exclude = "id")
-public class Country implements Serializable{
+public class Country implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 1L;
 
-	private int id;
+  private int id;
 
-    private String name;
+  private String name;
 
-    private String codeName;
+  private String codeName;
 
-    public Country(String name, String codeName) {
-        this.name = name;
-        this.codeName = codeName;
-    }
+  public Country(String name, String codeName) {
+    this.name = name;
+    this.codeName = codeName;
+  }
 }
