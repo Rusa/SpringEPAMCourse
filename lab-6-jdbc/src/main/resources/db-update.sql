@@ -1,0 +1,1 @@
+INSERT INTO country (name, code_name) VALUES ('VATICAN', 'VA')
