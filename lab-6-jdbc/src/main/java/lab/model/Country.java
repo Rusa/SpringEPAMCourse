@@ -1,7 +1,10 @@
 package lab.model;
 
+import lombok.Builder;
+
 import java.io.Serializable;
 
+@Builder
 public class Country implements Serializable{
 
 	private static final long serialVersionUID = 1L;

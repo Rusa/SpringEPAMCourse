@@ -1,9 +1,5 @@
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+package lab.dao;
 
-import java.util.ArrayList;
-import java.util.List;
-import lab.dao.CountryDao;
 import lab.model.Country;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,6 +9,12 @@ import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:application-context.xml")
 public class JdbcTest {
@@ -20,8 +22,8 @@ public class JdbcTest {
 	@Autowired
 	private CountryDao countryDao;
 	
-    private List<Country> expectedCountryList = new ArrayList<Country>();
-    private List<Country> expectedCountryListStartsWithA = new ArrayList<Country>();
+    private List<Country> expectedCountryList = new ArrayList<>();
+    private List<Country> expectedCountryListStartsWithA = new ArrayList<>();
     private Country countryWithChangedName = new Country(1, "Russia", "RU");
 
     @Before
