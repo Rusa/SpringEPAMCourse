@@ -2,6 +2,7 @@ package lab.dao.jpa;
 
 import lab.dao.CountryDao;
 import lab.model.Country;
+import lombok.extern.log4j.Log4j;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,6 +21,8 @@ import static org.junit.Assert.assertEquals;
 /**
  * Illustrates basic use of Hibernate as a JPA provider.
  */
+
+@Log4j
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:application-context.xml")
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)

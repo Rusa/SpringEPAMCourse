@@ -11,4 +11,11 @@
     </parent>
 
     <artifactId>lab-10-quartz</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+        </dependency>
+    </dependencies>
 </project>

@@ -41,7 +41,7 @@ public class UserFormController {
 
 	@RequestMapping(method = RequestMethod.POST)
 	public ModelAndView processSubmit(@Valid UserFormBean userFormBean, Errors errors) {
-		
+
 		if (errors.hasErrors()) {
 
 			log.info("Adduserform validation failed.");
